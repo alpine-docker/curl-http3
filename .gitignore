@@ -1,1 +1,4 @@
-*.swp
+*crane
+*.tar.gz
+jq
+functions.sh

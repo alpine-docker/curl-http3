@@ -3,12 +3,11 @@ ARG CURL_VERSION=curl-7_84_0
 # https://github.com/cloudflare/quiche/releases
 ARG QUICHE_VERSION=0.14.0
 
-FROM alpine:3.16 AS base
+FROM rust:alpine AS base
 
 ARG CURL_VERSION
 ARG QUICHE_VERSION
 
-LABEL maintainer="macbre <maciej.brencz@gmail.com>"
 WORKDIR /opt
 
 # install dependency
@@ -30,7 +29,7 @@ RUN mkdir -p /root
 ENV HOME /root
 
 # set up Rust
-RUN wget https://sh.rustup.rs -O - | sh -s -- -y
+#RUN wget https://sh.rustup.rs -O - | sh -s -- -y
 
 ENV PATH "${PATH}:$HOME/.cargo/bin"
 RUN cargo --version; rustc --version
@@ -68,7 +67,7 @@ RUN ldd $(which curl)
 
 # make our resulting image way smaller
 # from 2.85GB to 44.9MB
-FROM alpine:3.16
+FROM alpine
 
 ARG CURL_VERSION
 ARG QUICHE_VERSION
