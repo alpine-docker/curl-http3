@@ -49,6 +49,7 @@ if [[ "$CIRCLE_BRANCH" == "master" || "$CIRCLE_BRANCH" == "main" ]]; then
    --platform "${platform}" \
    "${ARGS[@]}" \
    --no-cache \
+   --attest type=provenance,mode=max \
    --tag "${image}:${tag}" \
    --tag "${image}:latest" \
    .
