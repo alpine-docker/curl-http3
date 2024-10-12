@@ -81,8 +81,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            CURL_VERSION=${{ env.LATEST_CURL_VERSION }}
-            QUICHE_VERSION=${{ env.LATEST_QUICHE_VERSION }}
+            CURL_VERSION=${{ env.CURL_VERSION }}
+            QUICHE_VERSION=${{ env.QUICHE_VERSION }}
   
       # - name: Checkout code
       #   uses: actions/checkout@v2
