@@ -37,8 +37,8 @@ jobs:
            #curl -H "Cache-Control: no-cache" -sL "https://raw.githubusercontent.com/alpine-docker/multi-arch-docker-images/stable/functions.sh" -o functions.sh
            curl -H "Cache-Control: no-cache" -sL "https://raw.githubusercontent.com/alpine-docker/multi-arch-docker-images/refs/heads/master/functions.sh" -o functions.sh 
            source functions.sh
-           CURL_TAG=$(get_latest_release curl/curl)
-           QUICHE_TAG=$(get_latest_release cloudflare/quiche)
+           CURL_VERSION=$(get_latest_release curl/curl)
+           QUICHE_VERSION=$(get_latest_release cloudflare/quiche)
            echo "Latest curl version is $CURL_VERSION"
            echo "Latest quiche version is $QUICHE_VERSION"           
            echo "CURL_VERSION=$CURL_VERSION" >> $GITHUB_ENV
