@@ -4,6 +4,8 @@
 
 A custom `curl` build with `brotli`, `BoringSSL` and `http3` support (via `quiche`) in **alpine image**.
 
+[![DockerHub Badge](http://dockeri.co/image/alpine/curl-http3)](https://hub.docker.com/r/alpine/curl-http3/)
+
 ## Usage
 
 ```
