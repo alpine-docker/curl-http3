@@ -6,6 +6,8 @@ A custom `curl` build with `brotli`, `BoringSSL` and `http3` support (via `quich
 
 [![DockerHub Badge](http://dockeri.co/image/alpine/curl-http3)](https://hub.docker.com/r/alpine/curl-http3/)
 
+Follow up document: [Building and Testing Nginx HTTP/3 Support with Docker Compose](https://medium.com/towardsdev/building-and-testing-nginx-http-3-support-with-docker-compose-df30477f7460)
+
 ## Usage
 
 ```
